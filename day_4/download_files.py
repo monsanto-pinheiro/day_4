@@ -16,15 +16,14 @@ if __name__ == '__main__':
 	### show arguments
 	print(sys.argv)
 	
-	if (len(sys.argv) != 4):
-		print("usage: {} <file id> <file format> <size>".format(\
+	if (len(sys.argv) != 3):
+		print("usage: {} <file id> <file format>".format(\
 						os.path.basename(sys.argv[0])))
 		sys.exit(1)
 	
 	## get id from command line
 	id_by_arg = sys.argv[1]
 	file_format = sys.argv[2]
-	max_file_size = sys.argv[3]
 	
 	if (file_format not in FILE_FORMAT_ALLOWED):
 		print('Formats allowed: {}'.format(', '.join(FILE_FORMAT_ALLOWED)))
